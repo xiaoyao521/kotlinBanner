@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:context=".MainActivity">
+
+    <TextView android:id="@+id/text" android:text="这是网络图片,网络图片可滚动，间隔4秒" android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+    />
+    <com.bigkoo.convenientbanner.ConvenientBanner
+            app:layout_constraintTop_toBottomOf="@id/text"
+            android:id="@+id/convenientbanner"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@mipmap/ic_launcher"
+            app:canLoop="true"
+            tools:ignore="MissingConstraints"/>
+    <TextView android:id="@+id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="这是本地图片，暂没设置滚动效果，但可以无限轮播"
+              app:layout_constraintTop_toBottomOf="@id/convenientbanner"
+    />
+    <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/convenientbanner1"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@mipmap/ic_launcher"
+            app:canLoop="true"
+            tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
